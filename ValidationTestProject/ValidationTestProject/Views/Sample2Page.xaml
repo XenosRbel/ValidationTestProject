@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:ValidationTestProject.Views;assembly=ValidationTestProject"
+             xmlns:behaviors="clr-namespace:ValidationTestProject.Behaviors;assembly=ValidationTestProject"
+             x:Class="ValidationTestProject.Views.Sample2Page">
+    <ContentPage.Content>
+        <StackLayout>
+            <Entry Text="{Binding Path=UserData.Value.UserName, Mode=TwoWay}" Placeholder="user name"/>
+            <Entry x:Name="Password" Text="{Binding Path=UserData.Value.Password, Mode=TwoWay}" Placeholder="password">
+                <Entry.Behaviors>
+                    <behaviors:PasswordValidationBehavior/>
+                </Entry.Behaviors>
+            </Entry>
+            <Entry Text="{Binding Path=UserData.Value.ConfirmPassword, Mode=TwoWay}" Placeholder="confirm password">
+                <Entry.Behaviors>
+                    <behaviors:PasswordValidationBehavior/>
+                    <behaviors:ConfirmPasswordValidationBehavior BindingContext="{x:Reference Password}"
+                                                                 Text="{Binding Text}"/>
+                </Entry.Behaviors>
+            </Entry>
+            <local:MenuView/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

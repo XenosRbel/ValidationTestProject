@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ValidationTestProject.Views.MenuView">
+  <ContentView.Content>
+      <StackLayout>
+          <Button Text="Sample 1" Command="{Binding Path=Navigate1}"></Button>
+          <Button Text="Sample 2" Command="{Binding Path=Navigate2}"></Button>
+          <Button Text="Sample 3" Command="{Binding Path=Navigate3}"></Button>
+        </StackLayout>
+  </ContentView.Content>
+</ContentView>

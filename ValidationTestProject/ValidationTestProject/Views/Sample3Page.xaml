@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:views="clr-namespace:ValidationTestProject.Views;assembly=ValidationTestProject"
+             x:Class="ValidationTestProject.Views.Sample3Page">
+    <ContentPage.Content>
+        <StackLayout>
+            <Entry Text="{Binding Path=UserData.Value.UserName, Mode=TwoWay}" Placeholder="user name"/>
+            <Entry Text="{Binding Path=UserData.Value.Password, Mode=TwoWay}" Placeholder="password"/>
+            <Entry Text="{Binding Path=UserData.Value.ConfirmPassword, Mode=TwoWay}" Placeholder="confirm password"/>
+            <Button Command="{Binding Path=CheckUserData}" Text="Submit"/>
+            <BoxView Margin="0,0,0,10"></BoxView>
+            <views:MenuView/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
