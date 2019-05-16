@@ -13,7 +13,7 @@ namespace ValidationTestProject
 		{
 			InitializeComponent();
 
-			var navigationPage = new NavigationPage(new MainPage());
+			var navigationPage = new NavigationPage(new Sample4Page());
 			MainPage = navigationPage.RootPage;
 		}
 

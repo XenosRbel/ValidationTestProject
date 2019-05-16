@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ValidationTestProject.Views.Sample4Page">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="User name"/>
+                <Entry Placeholder="Input user name"
+                       Text="{Binding Path=UserName, Mode=TwoWay}"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Password"/>
+                <Entry Placeholder="Input password"
+                       Text="{Binding Path=UserPassword, Mode=TwoWay}"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Confirm password"/>
+                <Entry Placeholder="Confirm your password"
+                       Text="{Binding Path=UserPasswordConfirm, Mode=TwoWay}"/>
+            </StackLayout>
+            <Label Text="{Binding Path=ErrorMessage, Mode=OneWay}"/>
+            <Button Text="Submit"
+                    Command="{Binding Path=SubmitCommand}"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

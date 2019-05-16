@@ -7,6 +7,7 @@
           <Button Text="Sample 1" Command="{Binding Path=Navigate1}"></Button>
           <Button Text="Sample 2" Command="{Binding Path=Navigate2}"></Button>
           <Button Text="Sample 3" Command="{Binding Path=Navigate3}"></Button>
+          <Button Text="Sample 4" Command="{Binding Path=Navigate4}"></Button>
         </StackLayout>
   </ContentView.Content>
 </ContentView>

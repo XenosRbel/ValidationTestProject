@@ -12,6 +12,7 @@ namespace ValidationTestProject.ViewModels.Menu
 		public Command Navigate1 { get; set; }
 		public Command Navigate2 { get; set; }
 		public Command Navigate3 { get; set; }
+		public Command Navigate4 { get; set; }
 
 		public MenuViewModel(INavigation navigation)
 		{
@@ -19,6 +20,12 @@ namespace ValidationTestProject.ViewModels.Menu
 			Navigate1 = new Command(Sample1);
 			Navigate2 = new Command(Sample2);
 			Navigate3 = new Command(Sample3);
+			Navigate4 = new Command(Sample4);
+		}
+
+		private void Sample4()
+		{
+			_navigation.PushModalAsync(new Sample4Page());
 		}
 
 		private void Sample3()
