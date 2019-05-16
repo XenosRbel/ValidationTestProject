@@ -1,6 +1,7 @@
 ﻿using FluentValidation;
 using ValidationTestProject.Helpers;
 using ValidationTestProject.Model;
+using ValidationTestProject.Resext;
 using ValidationTestProject.Validations.Rules;
 using Xamarin.Forms;
 
@@ -33,7 +34,7 @@ namespace ValidationTestProject.ViewModels
 			}
 			else
 			{
-				_page.DisplayAlert("Validation", $"{result?.Errors[0]}", "OK");
+				_page.DisplayAlert("Validation", $"{result?.Errors[0]}\t{AppResources.errorUserNameMessage}", "OK");
 			}
 		}
 	}

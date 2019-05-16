@@ -5,7 +5,9 @@ VisualStudioVersion = 16.0.28803.352
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ValidationTestProject.UWP", "ValidationTestProject\ValidationTestProject.UWP\ValidationTestProject.UWP.csproj", "{0AC853D2-36A3-4E03-922F-418E1CF0F457}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ValidationTestProject", "ValidationTestProject\ValidationTestProject\ValidationTestProject.csproj", "{CAFA0736-3511-4767-ABE0-0523BCBD3EEE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ValidationTestProject", "ValidationTestProject\ValidationTestProject\ValidationTestProject.csproj", "{CAFA0736-3511-4767-ABE0-0523BCBD3EEE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ValidationTestProject.Droid", "ValidationTestProject\ValidationTestProject.Droid\ValidationTestProject.Droid.csproj", "{EA808114-2664-4BB1-B7FA-C02BAB098F03}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -67,6 +69,30 @@ Global
 		{CAFA0736-3511-4767-ABE0-0523BCBD3EEE}.Release|x86.ActiveCfg = Release|Any CPU
 		{CAFA0736-3511-4767-ABE0-0523BCBD3EEE}.Release|x86.Build.0 = Release|Any CPU
 		{CAFA0736-3511-4767-ABE0-0523BCBD3EEE}.Release|x86.Deploy.0 = Release|Any CPU
+		{EA808114-2664-4BB1-B7FA-C02BAB098F03}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA808114-2664-4BB1-B7FA-C02BAB098F03}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA808114-2664-4BB1-B7FA-C02BAB098F03}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{EA808114-2664-4BB1-B7FA-C02BAB098F03}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{EA808114-2664-4BB1-B7FA-C02BAB098F03}.Debug|ARM.Build.0 = Debug|Any CPU
+		{EA808114-2664-4BB1-B7FA-C02BAB098F03}.Debug|ARM.Deploy.0 = Debug|Any CPU
+		{EA808114-2664-4BB1-B7FA-C02BAB098F03}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{EA808114-2664-4BB1-B7FA-C02BAB098F03}.Debug|x64.Build.0 = Debug|Any CPU
+		{EA808114-2664-4BB1-B7FA-C02BAB098F03}.Debug|x64.Deploy.0 = Debug|Any CPU
+		{EA808114-2664-4BB1-B7FA-C02BAB098F03}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{EA808114-2664-4BB1-B7FA-C02BAB098F03}.Debug|x86.Build.0 = Debug|Any CPU
+		{EA808114-2664-4BB1-B7FA-C02BAB098F03}.Debug|x86.Deploy.0 = Debug|Any CPU
+		{EA808114-2664-4BB1-B7FA-C02BAB098F03}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA808114-2664-4BB1-B7FA-C02BAB098F03}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EA808114-2664-4BB1-B7FA-C02BAB098F03}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{EA808114-2664-4BB1-B7FA-C02BAB098F03}.Release|ARM.ActiveCfg = Release|Any CPU
+		{EA808114-2664-4BB1-B7FA-C02BAB098F03}.Release|ARM.Build.0 = Release|Any CPU
+		{EA808114-2664-4BB1-B7FA-C02BAB098F03}.Release|ARM.Deploy.0 = Release|Any CPU
+		{EA808114-2664-4BB1-B7FA-C02BAB098F03}.Release|x64.ActiveCfg = Release|Any CPU
+		{EA808114-2664-4BB1-B7FA-C02BAB098F03}.Release|x64.Build.0 = Release|Any CPU
+		{EA808114-2664-4BB1-B7FA-C02BAB098F03}.Release|x64.Deploy.0 = Release|Any CPU
+		{EA808114-2664-4BB1-B7FA-C02BAB098F03}.Release|x86.ActiveCfg = Release|Any CPU
+		{EA808114-2664-4BB1-B7FA-C02BAB098F03}.Release|x86.Build.0 = Release|Any CPU
+		{EA808114-2664-4BB1-B7FA-C02BAB098F03}.Release|x86.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

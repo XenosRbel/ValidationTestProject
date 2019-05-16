@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Threading;
+using ValidationTestProject.Helpers;
 using ValidationTestProject.Views;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -13,8 +15,6 @@ namespace ValidationTestProject
 
 			var navigationPage = new NavigationPage(new MainPage());
 			MainPage = navigationPage.RootPage;
-
-			//MainPage.Navigation.PushModalAsync(new Sample2Page(), false);
 		}
 
 		protected override void OnStart()

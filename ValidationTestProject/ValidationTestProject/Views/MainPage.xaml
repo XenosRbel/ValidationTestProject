@@ -3,10 +3,11 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:ValidationTestProject"
              xmlns:views="clr-namespace:ValidationTestProject.Views;assembly=ValidationTestProject"
+             xmlns:helpers="clr-namespace:ValidationTestProject.Helpers;assembly=ValidationTestProject"
              x:Class="ValidationTestProject.MainPage">
 
     <StackLayout>
-        <Entry Text="{Binding Path=UserDataValidatableObject.Value.UserName, Mode=TwoWay}" Placeholder="user name"/>
+        <Entry Text="{Binding Path=UserDataValidatableObject.Value.UserName, Mode=TwoWay}" Placeholder="{helpers:Translate hintUserName}"/>
         <Entry Text="{Binding Path=UserDataValidatableObject.Value.Password, Mode=TwoWay}" Placeholder="password"/>
         <Entry Text="{Binding Path=UserDataValidatableObject.Value.ConfirmPassword, Mode=TwoWay}" Placeholder="confirm password"/>
         <Button Command="{Binding Path=CheckUserData}" Text="Submit"/>
