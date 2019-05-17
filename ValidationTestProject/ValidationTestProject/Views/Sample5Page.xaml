@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:converters="clr-namespace:ValidationTestProject.Converters;assembly=ValidationTestProject"
-             x:Class="ValidationTestProject.Views.Sample4Page">
+             x:Class="ValidationTestProject.Views.Sample5Page">
     <ContentPage.Resources>
         <ResourceDictionary>
             <converters:BoolToColorConverter x:Key="BoolToColor"/>
@@ -14,33 +14,25 @@
                 <Label Text="User name"/>
                 <Entry Placeholder="Input user name"
                        Text="{Binding UserName}"/>
-                <Label Text="{Binding ErrorMessage}" TextColor="Red"/>
+                <Label Text="{Binding UserNameErrorMessage}" TextColor="Red"/>
             </StackLayout>
             <StackLayout Orientation="Horizontal">
                 <Label Text="Password"/>
                 <Entry Placeholder="Input password"
                        Text="{Binding UserPassword}"/>
-                <Label Text="{Binding ErrorMessage}" TextColor="Red"/>
+                <Label Text="{Binding UserPasswordErrorMessage}" TextColor="Red"/>
             </StackLayout>
             <StackLayout Orientation="Horizontal">
                 <Label Text="Confirm password"/>
                 <Entry Placeholder="Confirm your password"
                        Text="{Binding UserPasswordConfirm}"/>
-                <Label Text="{Binding ErrorMessage}" TextColor="Red"/>
+                <Label Text="{Binding UserPasswordConfirmErrorMessage}" TextColor="Red"/>
             </StackLayout>
             <Label Text="{Binding ErrorMessage}" TextColor="Red"/>
             <Button Text="Submit"
-                    IsVisible="{Binding IsValid}"
+                    IsEnabled="{Binding IsValid}"
                     Command="{Binding SubmitCommand}"
                     BackgroundColor="{Binding Path=IsValid, Converter={StaticResource BoolToColor}}">
-                <!--<Button.Triggers>
-                    <DataTrigger TargetType="Button" Binding="{Binding Path=IsUserNameValid}" Value="true">
-                        <Setter Property="BackgroundColor" Value="Chartreuse"/>
-                    </DataTrigger>
-                    <DataTrigger TargetType="Button" Binding="{Binding Path=IsUserNameValid}" Value="false">
-                        <Setter Property="BackgroundColor" Value="Red"/>
-                    </DataTrigger>
-                </Button.Triggers>-->
             </Button>
         </StackLayout>
     </ContentPage.Content>

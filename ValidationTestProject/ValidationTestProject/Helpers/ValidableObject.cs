@@ -3,11 +3,11 @@ using System.Linq;
 
 namespace ValidationTestProject.Helpers
 {
-	public class ValidatableObject<T> : ObservableObject<T>, IValidity
+	public class ValidableObject<T> : ObservableObject<T>, IValidity
 	{
 		public List<IBaseValidationRule<T>> Validations => _validations;
 
-		public List<string> Errors
+		public Dictionary<string, string> Errors
 		{
 			get => _errors;
 			set
@@ -27,9 +27,9 @@ namespace ValidationTestProject.Helpers
 			}
 		}
 		
-		public ValidatableObject()
+		public ValidableObject()
 		{
-			_errors = new List<string>();
+			_errors = new Dictionary<string, string>();
 			_isValid = false;
 			_validations = new List<IBaseValidationRule<T>>();
 		}
@@ -38,16 +38,15 @@ namespace ValidationTestProject.Helpers
 		{
 			Errors.Clear();
 
-			var errors = _validations.Where(item => !item.Check(Value))
-				.Select(item => item.ValidationMessage);
+			var errors = _validations.Where(item => !item.Check(Value)).ToDictionary(x => x.PropertyName, y => y.ValidationMessage);
 
-			Errors = errors.ToList();
+			Errors = errors;
 			IsValid = !Errors.Any();
 
 			return IsValid;
 		}
 
-		private List<string> _errors;
+		private Dictionary<string, string> _errors;
 		private bool _isValid;
 		private readonly List<IBaseValidationRule<T>> _validations;
 	}

@@ -3,30 +3,60 @@ using ValidationTestProject.Model;
 
 namespace ValidationTestProject.Validations.Rules
 {
-	public class UserDataRule<T> : IBaseValidationRule<T>
+	//public class UserDataRule<T> : IBaseValidationRule<T>
+	//{
+	//	public string ValidationMessage { get; set; }
+	//	public bool Check(T value)
+	//	{
+	//		if (value is User userData)
+	//		{
+	//			return !string.IsNullOrWhiteSpace(userData.UserName) &&
+	//				!string.IsNullOrWhiteSpace(userData.Password) &&
+	//				!string.IsNullOrWhiteSpace(userData.ConfirmPassword) &&
+	//				string.Equals(userData.Password, userData.ConfirmPassword);
+	//		}
+
+	//		return false;
+	//	}
+	//}
+
+	public class IsPasswordNotNullOrWhiteSpace : IBaseValidationRule<User>
 	{
+		public string PropertyName { get; set; }
 		public string ValidationMessage { get; set; }
-		public bool Check(T value)
+		public bool Check(User value)
 		{
-			if (value is User userData)
-			{
-				var paswdConfirmResultCheck = !string.IsNullOrWhiteSpace(userData.ConfirmPassword);
-				var userNameResultCheck = !string.IsNullOrWhiteSpace(userData.UserName);
-				var paswdResultCheck = !string.IsNullOrWhiteSpace(userData.Password);
-				var twinPaswd = string.Equals(userData.Password, userData.ConfirmPassword);
+			return !string.IsNullOrWhiteSpace(value.Password);
+		}
+	}
 
-				if (twinPaswd)
-				{
-					if (paswdConfirmResultCheck && userNameResultCheck && paswdResultCheck)
-					{
-						return true;
-					}
+	public class IsConfirmPasswordNotNullOrWhiteSpace : IBaseValidationRule<User>
+	{
+		public string PropertyName { get; set; }
+		public string ValidationMessage { get; set; }
+		public bool Check(User value)
+		{
+			return !string.IsNullOrWhiteSpace(value.ConfirmPassword);
+		}
+	}
 
-					return false;
-				}
-			}
+	public class IsUserNameNotNullOrWhiteSpace : IBaseValidationRule<User>
+	{
+		public string PropertyName { get; set; }
+		public string ValidationMessage { get; set; }
+		public bool Check(User value)
+		{
+			return !string.IsNullOrWhiteSpace(value.UserName);
+		}
+	}
 
-			return false;
+	public class IsPasswordMatching : IBaseValidationRule<User>
+	{
+		public string PropertyName { get; set; }
+		public string ValidationMessage { get; set; }
+		public bool Check(User value)
+		{
+			return string.Equals(value.Password, value.ConfirmPassword);
 		}
 	}
 }
